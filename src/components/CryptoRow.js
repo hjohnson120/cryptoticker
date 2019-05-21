@@ -4,7 +4,7 @@ class CryptoRow extends Component {
   render() {
     return (
       <div>
-        <section>
+        <section className="table">
           <ul>
             <li>
               <h3> {this.props.name}</h3>
