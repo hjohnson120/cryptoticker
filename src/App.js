@@ -8,8 +8,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('component mounted')
     this.getCurrenciesFromApi()
+    setInterval(() => this.getCurrenciesFromApi(), 10000)
   }
 
   getCurrenciesFromApi = () => {
@@ -32,7 +32,10 @@ class App extends Component {
         {this.state.currencies.map(currency => {
           return (
             <>
-              <CryptoRow name={currency.name} currencies={currency.price} />
+              <CryptoRow
+                name={currency.name}
+                currencies={currency.quotes.USD.price}
+              />
             </>
           )
         })}

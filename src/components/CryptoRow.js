@@ -5,11 +5,12 @@ class CryptoRow extends Component {
     return (
       <div>
         <section>
-          <ol>
+          <ul>
             <li>
-              {this.props.name} {this.props.currencies}
+              <h3> {this.props.name}</h3>
+              <em>{this.props.currencies}</em>
             </li>
-          </ol>
+          </ul>
         </section>
       </div>
     )
