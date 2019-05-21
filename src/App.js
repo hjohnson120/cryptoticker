@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import CryptoRow from './components/CryptoRow'
+import Pictures from './components/Pictures'
 
 class App extends Component {
   state = {
@@ -35,6 +36,7 @@ class App extends Component {
               <CryptoRow
                 name={currency.name}
                 currencies={currency.quotes.USD.price}
+                id={currency.id}
               />
             </>
           )
